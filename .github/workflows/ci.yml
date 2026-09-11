@@ -1,0 +1,28 @@
+name: CI
+
+# Roda em todo push e em todo Pull Request para qualquer branch --
+# assim, mesmo que você trabalhe em branches separadas no futuro,
+# o CI protege a branch principal de código quebrado.
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"  # cacheia dependências entre execuções, deixa o CI mais rápido
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest -v
