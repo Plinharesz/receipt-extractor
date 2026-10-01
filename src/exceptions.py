@@ -36,3 +36,15 @@ class UnreadablePDFError(AppError):
         self.file_path = file_path
         self.reason = reason
         super().__init__(f"Could not read PDF at '{file_path}': {reason}")
+
+
+
+class ExportError(AppError):
+    """
+    Raised when receipts cannot be written to the requested export
+    format (e.g. invalid output path, disk full, corrupted write).
+    """
+
+    def __init__(self, reason: str):
+        self.reason = reason
+        super().__init__(f"Failed to export receipts: {reason}")
