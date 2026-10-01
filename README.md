@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # Receipt Extractor
 
 [![CI](https://github.com/plinharesz/receipt-extractor/actions/workflows/ci.yml/badge.svg)](https://github.com/plinharesz/receipt-extractor/actions/workflows/ci.yml)
