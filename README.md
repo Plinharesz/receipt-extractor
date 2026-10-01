@@ -4,6 +4,8 @@
 
 Extract structured data from PDF receipts and export a consolidated spreadsheet — no manual data entry required.
 
+**[Try the live demo →](https://SUA-URL-AQUI.streamlit.app)**
+
 ## The problem
 
 Small business owners, freelancers, and accountants routinely spend hours each week manually copying data from receipts and invoices into spreadsheets, just to reconcile them against bank statements afterward. It's repetitive, time-consuming, and error-prone.
